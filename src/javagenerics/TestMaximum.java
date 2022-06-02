@@ -27,13 +27,16 @@ public class TestMaximum<TM extends Comparable<TM>> {
         return maxValue;
     }
 
+
     public static <TM> void printMaximumValue(TM firstValue, TM secondValue, TM thirdValue, TM maxValue) {
-        System.out.printf("Maximum Value of %s , %s and %s is %s", firstValue, secondValue, thirdValue, maxValue);
+        System.out.printf("Maximum Value of %s , %s and %s is %s \n", firstValue, secondValue, thirdValue, maxValue);
     }
 
     public static void main(String[] args) {
         Integer fistValueInt = 6, secondValueInt = 9, thirdValueInt = 2;
+        Float firstValueFlt = 1.9f, secondValueFlt = 4.9f, thirdValueFlt = 3.9f;
 
         new TestMaximum(fistValueInt, secondValueInt, thirdValueInt).maximum();
+        new TestMaximum(firstValueFlt, secondValueFlt, thirdValueFlt).maximum();
     }
 }
