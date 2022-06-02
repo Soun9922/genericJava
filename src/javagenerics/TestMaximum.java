@@ -26,6 +26,17 @@ public class TestMaximum<TM extends Comparable<TM>> {
         printMaximumValue(firstValue, secondValue, thirdValue, maxValue);
         return maxValue;
     }
+    public static String TestMaximum(String firstValue, String secondValue, String thirdValue){
+        String maxValue = firstValue;
+        if (secondValue.compareTo(maxValue) > 0){
+            maxValue = secondValue;
+        }
+        if (thirdValue.compareTo(maxValue) > 0){
+            maxValue = thirdValue;
+        }
+        printMaximumValue(firstValue, secondValue, thirdValue, maxValue);
+        return maxValue;
+    }
 
 
     public static <TM> void printMaximumValue(TM firstValue, TM secondValue, TM thirdValue, TM maxValue) {
@@ -35,8 +46,10 @@ public class TestMaximum<TM extends Comparable<TM>> {
     public static void main(String[] args) {
         Integer fistValueInt = 6, secondValueInt = 9, thirdValueInt = 2;
         Float firstValueFlt = 1.9f, secondValueFlt = 4.9f, thirdValueFlt = 3.9f;
+        String firstValueStr = "CustardApple", secondValueStr = "Pomegranate", thirdValueStr = "DragonFruit";
 
         new TestMaximum(fistValueInt, secondValueInt, thirdValueInt).maximum();
         new TestMaximum(firstValueFlt, secondValueFlt, thirdValueFlt).maximum();
+        new TestMaximum(firstValueStr, secondValueStr, thirdValueStr).maximum();
     }
 }
