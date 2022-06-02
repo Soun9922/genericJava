@@ -17,7 +17,7 @@ public class TestMaximum<TM extends Comparable<TM>> {
     public TM maximum() {
         return TestMaximum.maximum(firstValue, secondValue, thirdValue, fourthValue, fifthValue, sixthValue);
     }
-
+    
     public static <TM extends Comparable<TM>> TM maximum(TM firstValue, TM secondValue, TM thirdValue, TM fourthValue, TM fifthValue, TM sixthValue) {
         TM maxValue = firstValue;
         if (secondValue.compareTo(maxValue) > 0) {
